@@ -4,7 +4,7 @@ import Calendar from './Calendar/Calendar';
 function App() {
   return (
     <div data-testid="app" className="App">
-      <p data-testid="appTitle">Comidita</p>
+      <h1 data-testid="appTitle">Comidita</h1>
       <Calendar />
     </div>
   );

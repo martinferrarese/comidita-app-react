@@ -3,8 +3,8 @@ import './Calendar.css';
 
 function Calendar() {
   return (
-    <div data-testid="calendar" className="d-inline-flex flex-row align-items-center">
-        <div className="p-2">
+    <div data-testid="calendar" className="d-flex flex-row align-items-center">
+        <div className="col-md-2 offset-md-1 p-2">
           <MDBCard data-testid="card-lunes" style={{ maxWidth: '22rem' }}>
           <MDBCardBody>
             <MDBCardTitle>Lunes</MDBCardTitle>
@@ -13,7 +13,7 @@ function Calendar() {
           </MDBCardBody>
           </MDBCard>
         </div>
-        <div className="p-2">
+        <div className="col-md-2 p-2">
           <MDBCard data-testid="card-martes" style={{ maxWidth: '22rem' }}>
           <MDBCardBody>
             <MDBCardTitle>Martes</MDBCardTitle>
@@ -22,7 +22,7 @@ function Calendar() {
           </MDBCardBody>
           </MDBCard>
         </div>
-        <div className="p-2">
+        <div className="col-md-2 p-2">
           <MDBCard data-testid="card-miercoles" style={{ maxWidth: '22rem' }}>
           <MDBCardBody>
             <MDBCardTitle>Miércoles</MDBCardTitle>
@@ -31,7 +31,7 @@ function Calendar() {
           </MDBCardBody>
           </MDBCard>
         </div>
-        <div className="p-2">
+        <div className="col-md-2 p-2">
           <MDBCard data-testid="card-jueves" style={{ maxWidth: '22rem' }}>
           <MDBCardBody>
             <MDBCardTitle>Jueves</MDBCardTitle>
@@ -40,7 +40,7 @@ function Calendar() {
           </MDBCardBody>
           </MDBCard>
         </div>
-        <div className="p-2">
+        <div className="col-md-2 p-2">
           <MDBCard data-testid="card-viernes" style={{ maxWidth: '22rem' }}>
           <MDBCardBody>
             <MDBCardTitle>Viernes</MDBCardTitle>
