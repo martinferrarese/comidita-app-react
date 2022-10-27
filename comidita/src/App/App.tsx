@@ -4,7 +4,7 @@ import Header from './Header/Header';
 const App = () => {
   return (
     <div className='App'>
-      <Header></Header>
+      <Header>Comidita</Header>
       <div className='Calendar'>
         <div className='DayOfTheWeek'>
           <p><b>Lunes</b></p>
