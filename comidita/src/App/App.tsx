@@ -1,11 +1,10 @@
 import './App.css';
+import Header from './Header/Header';
 
-function App() {
+const App = () => {
   return (
     <div className='App'>
-      <div className='header'>
-        <p className='title'><b>Comidita</b></p>
-      </div>
+      <Header></Header>
       <div className='Calendar'>
         <div className='DayOfTheWeek'>
           <p><b>Lunes</b></p>
