@@ -1,34 +1,15 @@
+import Day from "./Day/Day";
+
 const Calendar = () => {
     return (
         <div className='Calendar'>
-            <div className='DayOfTheWeek'>
-                <p><b>Lunes</b></p>
-                <p>Almuerzo</p>
-                <p>Cena</p>
-            </div>
-            <div className='DayOfTheWeek'>
-                <p><b>Martes</b></p>
-                <p>Almuerzo</p>
-                <p>Cena</p>
-            </div>
-            <div className='DayOfTheWeek'>
-                <p><b>Miércoles</b></p>
-                <p>Almuerzo</p>
-                <p>Cena</p>
-            </div>
-            <div className='DayOfTheWeek'>
-                <p><b>Jueves</b></p>
-                <p>Almuerzo</p>
-                <p>Cena</p>
-            </div>
-            <div className='DayOfTheWeek'>
-                <p><b>Viernes</b></p>
-                <p>Almuerzo</p>
-                <p>Cena</p>
-            </div>
+            <Day day={"Lunes"}></Day>
+            <Day day={"Martes"}></Day>
+            <Day day={"Miércoles"}></Day>
+            <Day day={"Jueves"}></Day>
+            <Day day={"Viernes"}></Day>
         </div>
     )
-
 }
 
 export default Calendar;
