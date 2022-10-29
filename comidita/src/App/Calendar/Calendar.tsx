@@ -1,13 +1,13 @@
-import Day from "./Day/Day";
+import { ReactChild } from "react";
 
-const Calendar = () => {
+type CalendarType = {
+    children: ReactChild[]
+}
+
+const Calendar = ({ children }: CalendarType) => {
     return (
         <div className='Calendar'>
-            <Day day={"Lunes"}></Day>
-            <Day day={"Martes"}></Day>
-            <Day day={"Miércoles"}></Day>
-            <Day day={"Jueves"}></Day>
-            <Day day={"Viernes"}></Day>
+            {children}
         </div>
     )
 }
