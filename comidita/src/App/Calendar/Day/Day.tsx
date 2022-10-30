@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { getLeadingCommentRanges } from "typescript";
 
 type DayType = {
     day: string
@@ -18,21 +19,28 @@ const Day = ({ day }: DayType) => {
         setDinner(newDinner);
     }
 
-    useEffect(() => {
+    const getLunch = () => {
         const localStorageLunchValue = localStorage.getItem("lunch");
-        const localStorageDinnerValue = localStorage.getItem("dinner");
-
         if (!localStorageLunchValue) {
             localStorage.setItem("lunch", "N/A");
         } else {
             setLunch(localStorageLunchValue);
         }
+    }
+
+    const getDinner = () => {
+        const localStorageDinnerValue = localStorage.getItem("dinner");
 
         if (!localStorageDinnerValue) {
             localStorage.setItem("dinner", "N/A");
         } else {
             setDinner(localStorageDinnerValue);
         }
+    }
+
+    useEffect(() => {
+        getLunch();
+        getDinner();
     }, []);
 
     return (
