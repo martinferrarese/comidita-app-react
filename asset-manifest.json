@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/comidita/static/css/main.da2747fa.css",
-    "main.js": "/comidita/static/js/main.94fb0561.js",
-    "static/js/787.77ea5c18.chunk.js": "/comidita/static/js/787.77ea5c18.chunk.js",
-    "index.html": "/comidita/index.html",
-    "main.da2747fa.css.map": "/comidita/static/css/main.da2747fa.css.map",
-    "main.94fb0561.js.map": "/comidita/static/js/main.94fb0561.js.map",
-    "787.77ea5c18.chunk.js.map": "/comidita/static/js/787.77ea5c18.chunk.js.map"
+    "main.css": "/comidita-app-react/static/css/main.da2747fa.css",
+    "main.js": "/comidita-app-react/static/js/main.dceeee77.js",
+    "static/js/787.77ea5c18.chunk.js": "/comidita-app-react/static/js/787.77ea5c18.chunk.js",
+    "index.html": "/comidita-app-react/index.html",
+    "main.da2747fa.css.map": "/comidita-app-react/static/css/main.da2747fa.css.map",
+    "main.dceeee77.js.map": "/comidita-app-react/static/js/main.dceeee77.js.map",
+    "787.77ea5c18.chunk.js.map": "/comidita-app-react/static/js/787.77ea5c18.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.da2747fa.css",
-    "static/js/main.94fb0561.js"
+    "static/js/main.dceeee77.js"
   ]
 }
