@@ -10,9 +10,7 @@ const Day = ({ day }: DayType) => {
 
     return (
         <div className='DayOfTheWeek'>
-            <p>
-                <b>{day}</b>
-            </p>
+            <h3>{day}</h3>
             <p>Almuerzo</p>
             <input
                 name="lunch"
@@ -24,6 +22,7 @@ const Day = ({ day }: DayType) => {
                 name="dinner"
                 value={dinner}
                 onChange={(e) => saveDinner(e.target.value)}
+                className="dinner-input"
             />
         </div>
     )
