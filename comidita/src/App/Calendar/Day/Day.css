@@ -1,0 +1,12 @@
+.DayOfTheWeek {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    border: #282c34;
+    border-width: 1px;
+    border-style: solid;
+    padding: 10px;
+    min-width: 80px;
+    align-items: center;
+    justify-content: center;
+}

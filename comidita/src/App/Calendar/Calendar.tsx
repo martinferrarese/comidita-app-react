@@ -1,4 +1,5 @@
 import { ReactChild } from "react";
+import './Calendar.css';
 
 type CalendarType = {
     children: ReactChild[]

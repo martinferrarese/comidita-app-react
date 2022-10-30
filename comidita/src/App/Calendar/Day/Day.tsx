@@ -1,4 +1,5 @@
-import useFoods from "./useFoods"
+import useFoods from "./useFoods";
+import './Day.css';
 
 type DayType = {
     day: string
