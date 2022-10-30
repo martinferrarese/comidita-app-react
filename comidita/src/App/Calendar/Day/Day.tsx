@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 type DayType = {
     day: string
@@ -7,6 +7,20 @@ type DayType = {
 const Day = ({ day }: DayType) => {
     const [lunch, setLunch] = useState<string>("");
     const [dinner, setDinner] = useState<string>("");
+
+    const saveDinner = (newDinner: string) => {
+        localStorage.setItem("dinner", newDinner);
+        setDinner(newDinner);
+    }
+
+    useEffect(() => {
+        const localStorageDinnerValue = localStorage.getItem("dinner")
+        if (!localStorageDinnerValue) {
+            localStorage.setItem("dinner", "N/A");
+        } else {
+            setDinner(localStorageDinnerValue);
+        }
+    }, []);
 
     return (
         <div className='DayOfTheWeek'>
@@ -23,7 +37,7 @@ const Day = ({ day }: DayType) => {
             <input
                 name="dinner"
                 value={dinner}
-                onChange={(e) => setDinner(e.target.value)}
+                onChange={(e) => saveDinner(e.target.value)}
             />
         </div>
     )
