@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react"
-import { getLeadingCommentRanges } from "typescript";
 
 type DayType = {
     day: string
@@ -10,29 +9,29 @@ const Day = ({ day }: DayType) => {
     const [dinner, setDinner] = useState<string>("");
 
     const saveLunch = (newLunch: string) => {
-        localStorage.setItem("lunch", newLunch);
+        localStorage.setItem(`${day}-lunch`, newLunch);
         setLunch(newLunch);
     }
 
     const saveDinner = (newDinner: string) => {
-        localStorage.setItem("dinner", newDinner);
+        localStorage.setItem(`${day}-dinner`, newDinner);
         setDinner(newDinner);
     }
 
     const getLunch = () => {
-        const localStorageLunchValue = localStorage.getItem("lunch");
+        const localStorageLunchValue = localStorage.getItem(`${day}-lunch`);
         if (!localStorageLunchValue) {
-            localStorage.setItem("lunch", "N/A");
+            localStorage.setItem(`${day}-lunch`, "");
         } else {
             setLunch(localStorageLunchValue);
         }
     }
 
     const getDinner = () => {
-        const localStorageDinnerValue = localStorage.getItem("dinner");
+        const localStorageDinnerValue = localStorage.getItem(`${day}-dinner`);
 
         if (!localStorageDinnerValue) {
-            localStorage.setItem("dinner", "N/A");
+            localStorage.setItem(`${day}-dinner`, "");
         } else {
             setDinner(localStorageDinnerValue);
         }
@@ -41,7 +40,7 @@ const Day = ({ day }: DayType) => {
     useEffect(() => {
         getLunch();
         getDinner();
-    }, []);
+    });
 
     return (
         <div className='DayOfTheWeek'>
