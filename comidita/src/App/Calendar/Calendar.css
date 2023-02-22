@@ -1,10 +1,10 @@
 .Calendar {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 @media (max-width: 1000px) {
-    .Calendar {
-        flex-direction: column;
-    }
+  .Calendar {
+    flex-direction: column;
+  }
 }

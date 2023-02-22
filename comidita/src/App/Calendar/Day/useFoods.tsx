@@ -1,50 +1,49 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react'
 
 const useFoods = (day: string) => {
-    const [lunch, setLunch] = useState<string>("");
-    const [dinner, setDinner] = useState<string>("");
+  const [lunch, setLunch] = useState<string>('')
+  const [dinner, setDinner] = useState<string>('')
 
-    const saveLunch = (newLunch: string) => {
-        localStorage.setItem(`${day}-lunch`, newLunch);
-        setLunch(newLunch);
+  const saveLunch = (newLunch: string) => {
+    localStorage.setItem(`${day}-lunch`, newLunch)
+    setLunch(newLunch)
+  }
+
+  const saveDinner = (newDinner: string) => {
+    localStorage.setItem(`${day}-dinner`, newDinner)
+    setDinner(newDinner)
+  }
+
+  const getLunch = () => {
+    const localStorageLunchValue = localStorage.getItem(`${day}-lunch`)
+    if (!localStorageLunchValue) {
+      localStorage.setItem(`${day}-lunch`, '')
+    } else {
+      setLunch(localStorageLunchValue)
     }
+  }
 
-    const saveDinner = (newDinner: string) => {
-        localStorage.setItem(`${day}-dinner`, newDinner);
-        setDinner(newDinner);
+  const getDinner = () => {
+    const localStorageDinnerValue = localStorage.getItem(`${day}-dinner`)
+
+    if (!localStorageDinnerValue) {
+      localStorage.setItem(`${day}-dinner`, '')
+    } else {
+      setDinner(localStorageDinnerValue)
     }
+  }
 
-    const getLunch = () => {
-        const localStorageLunchValue = localStorage.getItem(`${day}-lunch`);
-        if (!localStorageLunchValue) {
-            localStorage.setItem(`${day}-lunch`, "");
-        } else {
-            setLunch(localStorageLunchValue);
-        }
-    }
+  useEffect(() => {
+    getLunch()
+    getDinner()
+  })
 
-    const getDinner = () => {
-        const localStorageDinnerValue = localStorage.getItem(`${day}-dinner`);
-
-        if (!localStorageDinnerValue) {
-            localStorage.setItem(`${day}-dinner`, "");
-        } else {
-            setDinner(localStorageDinnerValue);
-        }
-    }
-
-    useEffect(() => {
-        getLunch();
-        getDinner();
-    })
-
-    return {
-        lunch,
-        dinner,
-        saveLunch,
-        saveDinner
-    }
-
+  return {
+    lunch,
+    dinner,
+    saveLunch,
+    saveDinner,
+  }
 }
 
-export default useFoods;
+export default useFoods

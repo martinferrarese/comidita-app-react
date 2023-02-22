@@ -1,16 +1,12 @@
-import { ReactChild } from "react";
-import './Calendar.css';
+import { ReactChild } from 'react'
+import './Calendar.css'
 
 type CalendarType = {
-    children: ReactChild[]
+  children: ReactChild[]
 }
 
 const Calendar = ({ children }: CalendarType) => {
-    return (
-        <div className='Calendar'>
-            {children}
-        </div>
-    )
+  return <div className='Calendar'>{children}</div>
 }
 
-export default Calendar;
+export default Calendar

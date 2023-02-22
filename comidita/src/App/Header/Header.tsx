@@ -1,15 +1,15 @@
-import { ReactChild } from "react";
+import { ReactChild } from 'react'
 
 type TypeHeader = {
-    children: ReactChild
+  children: ReactChild
 }
 
 const Header = ({ children }: TypeHeader) => {
-    return (
-        <div>
-            <h1>{children}</h1>
-        </div>
-    )
+  return (
+    <div>
+      <h1>{children}</h1>
+    </div>
+  )
 }
 
-export default Header;
+export default Header

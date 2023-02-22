@@ -1,16 +1,16 @@
 .DayOfTheWeek {
-    display: flex;
-    flex-direction: column;
-    margin: 0.2em;
-    border: #282c34;
-    border-width: 3px;
-    border-style: solid;
-    padding: 5px;
-    min-width: 80px;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  margin: 0.2em;
+  border: #282c34;
+  border-width: 3px;
+  border-style: solid;
+  padding: 5px;
+  min-width: 80px;
+  align-items: center;
+  justify-content: center;
 }
 
 .dinner-input {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
