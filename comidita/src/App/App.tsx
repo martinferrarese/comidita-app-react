@@ -1,7 +1,7 @@
-import './App.css'
-import Calendar from './Calendar/Calendar'
-import Day from './Calendar/Day/Day'
-import Header from './Header/Header'
+import './App.css';
+import Calendar from './Calendar/Calendar';
+import Day from './Calendar/Day/Day';
+import Header from './Header/Header';
 
 const App = () => {
   return (
@@ -15,7 +15,7 @@ const App = () => {
         <Day day={'Viernes'}></Day>
       </Calendar>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;

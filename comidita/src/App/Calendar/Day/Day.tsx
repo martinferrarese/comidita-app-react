@@ -1,12 +1,12 @@
-import useFoods from './useFoods'
-import './Day.css'
+import useFoods from './useFoods';
+import './Day.css';
 
 type DayType = {
-  day: string
-}
+  day: string;
+};
 
 const Day = ({ day }: DayType) => {
-  const { lunch, dinner, saveLunch, saveDinner } = useFoods(day)
+  const { lunch, dinner, saveLunch, saveDinner } = useFoods(day);
 
   return (
     <div className='DayOfTheWeek'>
@@ -21,7 +21,7 @@ const Day = ({ day }: DayType) => {
         className='dinner-input'
       />
     </div>
-  )
-}
+  );
+};
 
-export default Day
+export default Day;
